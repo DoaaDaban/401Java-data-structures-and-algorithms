@@ -3,7 +3,7 @@ Define a method to insert an element into the middle index of the array with shi
 
 Whiteboard Process
 
-![whitBoard](../WhitBoardCC2.png)
+![whitBoard](challenge2ArrayInsertShift.PNG)
 
 Approach & Efficiency
-initialized a new array and push until reacing the middle and after reaching the middle push with decreasing the index with O(n) Time complexity .
+initialized a new array and push until reacing the middle and after reaching the middle push with decreasing the index with O(n) Time complexity.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>lab3</name>
-	<comment>Project array-binary-search created by Buildship.</comment>
+	<name>linkedList</name>
+	<comment>Project linkedList created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>0</id>
+			<id>1633173337571</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

@@ -3,47 +3,42 @@
  */
 package lab3;
 
-import java.util.Arrays;
-
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
-    }
+    public static int binarySearch(int arr [], int searchKey){
+
+        int lowIdx = 0;
+        int highIdx = arr.length - 1;
+        int midIdx = ( lowIdx + highIdx ) / 2;
+        int value = midIdx;
+        while (true){
+            if(searchKey > arr[midIdx] ){
+                lowIdx = midIdx +1;
+                midIdx = ( lowIdx + highIdx ) / 2;
+                if(lowIdx > midIdx){
+                    value = -1;
+                    break;
+                }
+            }else if(searchKey < arr[midIdx]){
+                highIdx = midIdx - 1;
+                midIdx = ( lowIdx + highIdx ) / 2;
+                if(highIdx < midIdx){
+                    value = -1;
+                    break;
+                }
+            }else if(searchKey == arr[midIdx]){
+                value = midIdx;
+                break;
+            }
+        }
+        return value;
+        }
+
+
 
     public static void main(String[] args) {
-        int[] arr = {-131, -82, 0, 27, 42, 68, 179};
-        int[] arr2 = {11, 22, 33, 44, 55, 66, 77};
-
-        int length = arrLength(arr);
-        System.out.println(BinarySearch(arr,42));
-        System.out.println(BinarySearch(arr2,90));
-
-    }
-
-    public static int arrLength(int[] arr){
-        int lengthValue = 0;
-        for (int el : arr) {
-            lengthValue = lengthValue +1;
-        }
-        return lengthValue;
-    }
-
-    public static int BinarySearch(int[] arr,int value){
-        int arrayLength = arrLength(arr);
-        int highIndex = arrayLength - 1;
-        int lowIndex = 0;
-
-        while(lowIndex <= highIndex){
-            int middleIndex = ((lowIndex + highIndex) / 2);
-            if(arr[middleIndex] > value){
-                highIndex = middleIndex - 1;
-            } else if(arr[middleIndex] < value){
-                lowIndex = middleIndex + 1;
-            }else{
-                return middleIndex;
-            }
-
-        }
-        return  -1;
+	// write your code here
+        int arr[] = {1, 3, 5,7,11,13,17,19,23,29,31,37,41,43,47,53,59};
+        int x = binarySearch(arr,0);
+        System.out.print(x);
     }
 }

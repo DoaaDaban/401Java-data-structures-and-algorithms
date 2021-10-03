@@ -1,72 +1,98 @@
 package linkedList;
 
 public class LinkedList {
+
     private Node head;
-    private int size;
 
-    public LinkedList(){
-        head = null;
-        this.size = 0;
+    public LinkedList() {
+        head=null;
     }
 
-    /**
-     *
-     * @param value we receive a value and insert it in the front.
-     */
-    public void insert(int value){
-        //define the node
-        Node node = new Node(value);
-
-
-        node.next = this.head;
-        head = node;
-
-        size++;
+    public void insert( String value) {
+        Node newNode = new Node(value);
+        if (head== null) {
+            head = newNode;
+        } else {
+            newNode.setNext(head);
+            head= newNode;
+        }
     }
 
-    /**
-     *
-     * @param value this method checks to see if a value is in a linked list.
-     * @return boolean
-     */
-    public boolean includes(int value) {
 
-        //find the head
-        Node current  = head;
-
-        //check each node value in the list against input value
-        while (current != null) {
-            if (current.value == value) {
+    public Boolean include(String value) {
+        Node current = head;
+        while (current != null ) {
+            if(current.getData()==value) {
                 return true;
-            } else {
-                current = current.next;
             }
+            current = current.getNext();
         }
         return false;
     }
 
-    // this method will print the entire contents of the linked list
-    public String valuesToString(){
 
-        //find head
+
+    @Override
+    public String toString() {
         Node current = head;
-        String allValues = "";
-        //output all values of the list
-        while (current != null) {
-            System.out.print("{ " + current.value + " } -> ");
-            allValues = allValues + "{ " + current.value + " } -> ";
-            current = current.next;
+        String sortedList = "" ;
+        while (current!=null) {
+            sortedList = sortedList + "{ " + current.getData() + " } ->";
+            current = current.getNext();
         }
-        allValues = allValues + "NULL";
-        System.out.print("NULL");
-        return allValues;
-
+        sortedList= sortedList + " null";
+        return sortedList;
     }
 
-
-
-    public Node getHead(){
+    public Node getHead() {
         return head;
     }
-}
 
+    public void append (String value) {
+        Node newNode = new Node(value);
+
+        if(head == null) {
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
+            }
+            current.setNext(newNode);
+        }
+    }
+
+    public void insertBefore (String value, String newValue) {
+        Node newNode = new Node(newValue);
+        if (head == null)
+            head = newNode;
+        else if (head.getData() == value) {
+            newNode.setNext(head);
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current != null) {
+                if (current.getNext().getData() == value) {
+                    newNode.setNext(current.getNext());
+                    current.setNext(newNode);
+                    break;
+                }
+                current = current.getNext();
+            }
+        }
+    }
+
+    public void insertAfter (String value, String newValue) {
+        Node newNode = new Node(newValue);
+        Node current = head;
+        while (current != null) {
+            if (current.getData() == value) {
+                newNode.setNext(current.getNext());
+                current.setNext(newNode);
+                break;
+            }
+            current = current.getNext();
+        }
+    }
+
+}

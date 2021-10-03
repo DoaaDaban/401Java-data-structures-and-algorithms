@@ -3,27 +3,3 @@
  */
 package linkedList;
 
-public class App {
-
-    public static void main(String[] args) {
-
-        LinkedList List = new LinkedList();
-
-
-        List.insert(4);
-        List.insert(8);
-
-
-        LinkedList List2 = new LinkedList();
-
-
-        List2.insert(42);
-        List2.insert(82);
-
-        List.valuesToString();
-        System.out.println("");
-        List2.valuesToString();
-        System.out.println("");
-
-    }
-}

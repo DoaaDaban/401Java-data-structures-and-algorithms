@@ -3,3 +3,25 @@
  */
 package linkedList;
 
+public class App {
+    public static void main(String[] args) {
+        System.out.println("hello");
+
+        LinkedList linkedList=new LinkedList();
+        linkedList.insert("D");
+        linkedList.insert("o");
+        linkedList.insert("a");
+        linkedList.insert("a");
+
+        System.out.println(linkedList);
+
+        System.out.println(linkedList.includes("l"));
+
+
+        linkedList.append("K");
+        linkedList.insertBefore("a","U");
+        linkedList.insertAfter("D","T");
+
+        System.out.println(linkedList);
+    }
+}

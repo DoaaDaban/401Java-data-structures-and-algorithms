@@ -24,6 +24,34 @@ This challenge about how to using a linked list to store nodes in it and also ho
 
 * `stringPath()`: This method to show us the path for the nodes as a text.
 
+## append
+
+- arguments: new value
+- adds a new node with the given value to the end of the list
+
+## insert before
+
+- arguments: value, new value
+- adds a new node with the given new value immediately before the first node that has the value specified
+
+## insert after
+
+- arguments: value, new value
+- adds a new node with the given new value immediately after the first node that has the value specified
+
+## Whiteboard Process
+
+![](Challenge6linked-list-insertions(Append).PNG)
+
+
+## Approach & Efficiency
+
+### linked list approach 
+
+- Time complexity O(1)
+- Space O(n)
+
+
 # Checked List Of Linked List Code Challenge:
 
 - [x] Create a Linked List class

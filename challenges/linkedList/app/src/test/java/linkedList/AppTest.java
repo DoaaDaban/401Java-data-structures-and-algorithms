@@ -1,54 +1,122 @@
 package linkedList;
 
-//import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
+class AppTest{
+    @Test void successfullyInstantiate(){
+        LinkedList linkedList= new LinkedList();
+        assertNull(linkedList.getHead(), "the linked list should be empty");
+    }
+    @Test void insertTest(){
+        LinkedList linkedList= new LinkedList();
+        linkedList.insert("Y");
+        assertTrue(linkedList.includes("Y"), "faild insertion");
+    }
 
-
-public class AppTest {
     @Test
-    @DisplayName("test the insert and includes methods")
-    public void insertAndIncludesTest() {
-        LinkedList testList = new LinkedList();
+    void isHeadCorrect(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insert("D");
+        linkedList.insert("O");
+        linkedList.insert("A");
+        linkedList.insert("A");
+        assertEquals(linkedList.getHead().getData() , "A" , "The head is not pointing on First Element");
+    }
+    @Test
+    void insertMultipleNodes (){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insert("D");
+        linkedList.insert("O");
+        assertTrue(linkedList.includes("D"), "There is something wrong With Multiple Nodes Insertion");
+        assertTrue(linkedList.includes("O"), "There is something wrong With Multiple Nodes Insertion");
+    }
+    @Test
+    void findExistValue(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insert("D");
+        linkedList.insert("O");
+        assertTrue(linkedList.includes("O") , "The head is not pointing on First Element");
+    }
+    @Test
+    void findNonExistValue(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insert("D");
+        linkedList.insert("O");
+        assertFalse(linkedList.includes("O") , "The head is not pointing on First Element");
+    }
+    @Test
+    void returnAllList (){
+        LinkedList linkedList = new LinkedList();
+        linkedList.insert("D");
+        linkedList.insert("O");
+        linkedList.insert("A");
+        linkedList.insert("A");
+        assertEquals(linkedList.toString() , "{ D } ->{ O } ->{ A } ->{ A } -> null" , "There is something wrong With Multiple Nodes Insertion");
 
-        testList.insert(3);
-        testList.insert(8);
-        testList.insert(44);
-        testList.insert(6);
-
-        Assertions.assertTrue((testList.includes(44)), "app should return true for testList, 44");
-        Assertions.assertFalse(testList.includes(45), "app should return false for testList, 45");
-        Assertions.assertTrue(testList.includes(8), "app should return true for testList, 8");
+    }
+    @Test
+    void successfullyAddANodeToTheEnd(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.append("D");
+        linkedList.append("A");
+        linkedList.append("O");
+        assertEquals("{ D } ->{ O } ->{ A } -> null",linkedList.toString(),"The D Char should be in the end of the linked list");
 
     }
 
     @Test
-    @DisplayName("test the first value in the LinkedList")
-    public void nodeHeadTest(){
-        LinkedList testList = new LinkedList();
+    void successfullyAddMultipleNodesToTheEnd (){
+        LinkedList linkedList = new LinkedList();
+        linkedList.append("D");
+        linkedList.append("A");
+        linkedList.append("A");
+        assertEquals("{ D } ->{ A } ->{ A } -> null",linkedList.toString(),"The method should be able to Add Multiple Nodes end of the linked list");
 
-        testList.insert(3);
-        testList.insert(8);
-        testList.insert(44);
-        testList.insert(6);
-
-        Assertions.assertEquals(6,testList.getHead().value, "app should return 6 as a head for testList");
     }
 
     @Test
-    @DisplayName("test the print all value in the LinkedList")
-    public void printAllTest(){
-        LinkedList testList = new LinkedList();
+    void insertANodeBefore(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.append("D");
+        linkedList.append("O");
+        linkedList.append("A");
+        linkedList.append("A");
+        linkedList.insertBefore("O","Y");
+        assertEquals("{ D } ->{ R } ->{ O } ->{ A } ->{ A } -> null",linkedList.toString(),"Y char should be added before O char");
 
-        testList.insert(3);
-        testList.insert(8);
-        testList.insert(44);
-        testList.insert(6);
-
-        Assertions.assertEquals("{ 6 } -> { 44 } -> { 8 } -> { 3 } -> NULL",testList.valuesToString(), "app should print { 6 } -> { 44 } -> { 8 } -> { 3 } -> NULL");
     }
 
+    @Test
+    void insertANodeBeforeTheFirstNode(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.append("D");
+        linkedList.append("O");
+        linkedList.append("A");
+        linkedList.append("A");
+        linkedList.insertBefore("D","Y");
+        assertEquals("{ R } ->{ D } ->{ O } ->{ A } ->{ A } -> null",linkedList.toString(),"Y char should be added at the beginning of the linked list ");
+    }
 
+    @Test
+    void insertANodeAfterTheFirstNode(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.append("D");
+        linkedList.append("O");
+        linkedList.append("A");
+        linkedList.append("A");
+        linkedList.insertAfter("D","Y");
+        assertEquals("{ D } ->{ R } ->{ O } ->{ A } ->{ A } -> null",linkedList.toString(),"Y char should be after D char");
+    }
+
+    @Test
+    void insertANodeAfterTheLastNode(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.append("D");
+        linkedList.append("O");
+        linkedList.append("A");
+        linkedList.append("A");
+        linkedList.insertAfter("A","Y");
+        assertEquals("{ D } ->{ O } ->{ A } ->{ A } ->{ Y } -> null",linkedList.toString(),"Y char should be after A char");
+    }
 }

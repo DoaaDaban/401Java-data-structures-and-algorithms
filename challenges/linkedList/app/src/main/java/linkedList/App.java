@@ -4,26 +4,24 @@
 package linkedList;
 
 public class App {
-
     public static void main(String[] args) {
+        System.out.println("hello");
 
-        LinkedList List = new LinkedList();
+        LinkedList linkedList=new LinkedList();
+        linkedList.insert("D");
+        linkedList.insert("o");
+        linkedList.insert("a");
+        linkedList.insert("a");
+
+        System.out.println(linkedList);
+
+        System.out.println(linkedList.includes("l"));
 
 
-        List.insert(4);
-        List.insert(8);
+        linkedList.append("K");
+        linkedList.insertBefore("a","U");
+        linkedList.insertAfter("D","T");
 
-
-        LinkedList List2 = new LinkedList();
-
-
-        List2.insert(42);
-        List2.insert(82);
-
-        List.valuesToString();
-        System.out.println("");
-        List2.valuesToString();
-        System.out.println("");
-
+        System.out.println(linkedList);
     }
 }

@@ -52,7 +52,7 @@ class AppTest{
         linkedList.insert("O");
         linkedList.insert("A");
         linkedList.insert("A");
-        assertEquals(linkedList.toString() , "{ D } ->{ O } ->{ A } ->{ A } -> null" , "There is something wrong With Multiple Nodes Insertion");
+        assertEquals(linkedList.toString() , "{D} ->{O} ->{A} ->{A} -> Null" , "There is something wrong With Multiple Nodes Insertion");
 
     }
     @Test

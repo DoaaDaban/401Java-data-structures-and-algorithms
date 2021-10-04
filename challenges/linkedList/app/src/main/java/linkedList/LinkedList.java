@@ -5,6 +5,7 @@ public class LinkedList {
    private Node head;
 
    public LinkedList(){
+
        head= null;
    }
 
@@ -100,8 +101,55 @@ public class LinkedList {
             current = current.getNext();
         }
     }
+// ===========================CC7===================
 
 
+    /* Function to get the
+      nth node from end of list */
+    boolean kthFromEnd(int k)
+    {
+        Node main_ptr = head;
+        Node ref_ptr = head;
+
+        int count = 0;
+        if (head != null)
+        {
+            while (count < k)
+            {
+                if (ref_ptr == null)
+                {
+                    System.out.println(k
+                            + " is greater than the no "
+                            + " of nodes in the list");
+                    return false;
+                }
+                ref_ptr = ref_ptr.getNext();
+                count++;
+            }
+
+            if(ref_ptr == null)
+            {
+
+                if(head != null)
+                    System.out.println("Node no. " + k +
+                            " from last is " +
+                            head.getData());
+            }
+            else
+            {
+
+                while (ref_ptr != null)
+                {
+                    main_ptr = main_ptr.getNext();
+                    ref_ptr = ref_ptr.getNext();
+                }
+                System.out.println("Node no. " + k +
+                        " from last is " +
+                        main_ptr.getData());
+            }
+        }
+        return false;
+    }
 
 
 }

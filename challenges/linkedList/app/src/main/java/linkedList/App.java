@@ -23,5 +23,7 @@ public class App {
         linkedList.insertAfter("D","T");
 
         System.out.println(linkedList);
+
+        System.out.println(linkedList.kthFromEnd(2));
     }
 }

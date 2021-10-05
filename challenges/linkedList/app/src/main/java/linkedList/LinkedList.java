@@ -9,6 +9,18 @@ public class LinkedList {
        head= null;
    }
 
+    public int size () {
+        Node current;
+        int count=0;
+        current=head;
+        while(current != null){
+            count++;
+
+            current=current.getNext();
+        }
+        return count;
+    }
+
     public void insert(String value){
        Node newNode= new Node(value);
        if(head == null){
@@ -149,6 +161,42 @@ public class LinkedList {
             }
         }
         return false;
+    }
+// ===========================CC8===================
+
+    //    ZIP THE TWO LINKED LIST LISTS TOGETHER INTO ONE LINKED LIST
+    public static LinkedList zipLists(LinkedList list1, LinkedList list2){
+
+        Node node1 = list1.head;
+        Node node2 = list2.head;
+        LinkedList zipLists = new LinkedList();
+
+        int length;
+
+        if(list1.size()> list2.size()){
+            length = list1.size();
+        }else if(list1.size()< list2.size()){
+            length = list2.size();
+        }else{
+            length = list1.size();
+        }
+
+        while (length > 0){
+
+            if(node1 != null){
+                zipLists.kthFromEnd(node1.getData());
+                node1 = node1.getNext();
+            }
+
+            if(node2 != null){
+                zipLists.kthFromEnd(node2.getData());
+                node2 = node2.getNext();
+            }
+
+            length --;
+
+        }
+        return zipLists;
     }
 
 

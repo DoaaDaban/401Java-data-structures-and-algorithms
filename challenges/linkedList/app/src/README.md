@@ -39,9 +39,14 @@ This challenge about how to using a linked list to store nodes in it and also ho
 - arguments: value, new value
 - adds a new node with the given new value immediately after the first node that has the value specified
 
+## linked-list-kth
+- arguments: value
+- Return the node’s value that is k places from the tail of the linked list.
+
 ## Whiteboard Process
 
-![](Challenge6linked-list-insertions(Append).PNG)
+![linked-list-insertions(Append)](Challenge6linked-list-insertions(Append).PNG)
+![challenge7linked-list-kth](challenge7linked-list-kth.PNG)
 
 
 ## Approach & Efficiency

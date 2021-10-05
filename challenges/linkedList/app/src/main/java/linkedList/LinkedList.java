@@ -113,6 +113,28 @@ public class LinkedList {
             current = current.getNext();
         }
     }
+
+    public Boolean insertAfter(int idx, String Data) {
+        Node newNode = new Node(Data);
+        if (head == null) {
+            head = newNode;
+            return true;
+        } else {
+            int idxCount = 0;
+            Node current = head;
+            while (current != null) {
+                if (idxCount == idx) {
+                    newNode.setNext(current.getNext());
+                    current.setNext(newNode);
+                    idxCount++;
+                    break;
+                }
+                idxCount++;
+                current = current.getNext();
+            }
+            return true;
+        }
+    }
 // ===========================CC7===================
 
 
@@ -165,39 +187,40 @@ public class LinkedList {
 // ===========================CC8===================
 
     //    ZIP THE TWO LINKED LIST LISTS TOGETHER INTO ONE LINKED LIST
-    public static LinkedList zipLists(LinkedList list1, LinkedList list2){
+    public static LinkedList zipLists(LinkedList list1, LinkedList list2) throws Exception {
 
-        Node node1 = list1.head;
-        Node node2 = list2.head;
-        LinkedList zipLists = new LinkedList();
+        if (list1.size() == 0 && list2.size() == 0) {
+            throw new Exception("You can't zip two empty lists");
+        } else if (list1.size() == 0)
+            return list2;
+        else if (list2.size() == 0)
+            return list1;
+        else {
+            Node current = list1.head;
+            Node current2 = list2.head;
+            int length1 = list1.size();
+            int length2 = list2.size();
+            int index = 0;
 
-        int length;
-
-        if(list1.size()> list2.size()){
-            length = list1.size();
-        }else if(list1.size()< list2.size()){
-            length = list2.size();
-        }else{
-            length = list1.size();
-        }
-
-        while (length > 0){
-
-            if(node1 != null){
-                zipLists.kthFromEnd(node1.getData());
-                node1 = node1.getNext();
+            while (current.getNext() != null) {
+                list1.insertAfter(index, current2.getData());
+                if (current2.getNext() == null)
+                    break;
+                else {
+                    current2 = current2.getNext();
+                    current = current.getNext().getNext();
+                    index += 2;
+                }
             }
 
-            if(node2 != null){
-                zipLists.kthFromEnd(node2.getData());
-                node2 = node2.getNext();
-            }
+            if (length2 >= length1)
+                while (current2 != null) {
+                    list1.append(current2.getData());
+                    current2 = current2.getNext();
+                }
 
-            length --;
-
+            return list1;
         }
-        return zipLists;
     }
-
 
 }

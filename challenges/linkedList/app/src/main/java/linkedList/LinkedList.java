@@ -9,6 +9,18 @@ public class LinkedList {
        head= null;
    }
 
+    public int size () {
+        Node current;
+        int count=0;
+        current=head;
+        while(current != null){
+            count++;
+
+            current=current.getNext();
+        }
+        return count;
+    }
+
     public void insert(String value){
        Node newNode= new Node(value);
        if(head == null){
@@ -101,6 +113,28 @@ public class LinkedList {
             current = current.getNext();
         }
     }
+
+    public Boolean insertAfter(int idx, String Data) {
+        Node newNode = new Node(Data);
+        if (head == null) {
+            head = newNode;
+            return true;
+        } else {
+            int idxCount = 0;
+            Node current = head;
+            while (current != null) {
+                if (idxCount == idx) {
+                    newNode.setNext(current.getNext());
+                    current.setNext(newNode);
+                    idxCount++;
+                    break;
+                }
+                idxCount++;
+                current = current.getNext();
+            }
+            return true;
+        }
+    }
 // ===========================CC7===================
 
 
@@ -150,6 +184,43 @@ public class LinkedList {
         }
         return false;
     }
+// ===========================CC8===================
 
+    //    ZIP THE TWO LINKED LIST LISTS TOGETHER INTO ONE LINKED LIST
+    public static LinkedList zipLists(LinkedList list1, LinkedList list2) throws Exception {
+
+        if (list1.size() == 0 && list2.size() == 0) {
+            throw new Exception("You can't zip two empty lists");
+        } else if (list1.size() == 0)
+            return list2;
+        else if (list2.size() == 0)
+            return list1;
+        else {
+            Node current = list1.head;
+            Node current2 = list2.head;
+            int length1 = list1.size();
+            int length2 = list2.size();
+            int index = 0;
+
+            while (current.getNext() != null) {
+                list1.insertAfter(index, current2.getData());
+                if (current2.getNext() == null)
+                    break;
+                else {
+                    current2 = current2.getNext();
+                    current = current.getNext().getNext();
+                    index += 2;
+                }
+            }
+
+            if (length2 >= length1)
+                while (current2 != null) {
+                    list1.append(current2.getData());
+                    current2 = current2.getNext();
+                }
+
+            return list1;
+        }
+    }
 
 }

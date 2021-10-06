@@ -119,4 +119,22 @@ class AppTest{
         linkedList.insertAfter("A","Y");
         assertEquals("{ D } ->{ O } ->{ A } ->{ A } ->{ Y } -> null",linkedList.toString(),"Y char should be after A char");
     }
+
+
+
+    @Test
+
+    void oneOftheListsISEmpty() throws Exception {
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        LinkedList list3 = new LinkedList();
+
+        list1.append("D");
+        list1.append("O");
+        list1.append("A");
+        list1.append("A");
+        list1.append("D");
+        list1.append("A");
+        assertEquals(list1,list3.zipLists(list1,list2));
+    }
 }

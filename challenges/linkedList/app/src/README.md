@@ -12,18 +12,6 @@ This challenge about how to using a linked list to store nodes in it and also ho
 
 * Verify code matches algorithm.
 
-
-## API
-
-###  Methods in LinkedList Class
-
-* `insert(Node newNode)`: This method accepts a `Node` parameter and its purpose to add a new *Node* in the LinkedList.
-
-
-* `isInclude(Node head, int item)`: This method accepts a `Node` parameter and `int` parameter and its purpose to test our Nodes' values if they are found so the test gives us true or return false.
-
-* `stringPath()`: This method to show us the path for the nodes as a text.
-
 ## append
 
 - arguments: new value
@@ -46,7 +34,10 @@ This challenge about how to using a linked list to store nodes in it and also ho
 ## Whiteboard Process
 
 ![linked-list-insertions(Append)](Challenge6linked-list-insertions(Append).PNG)
+
 ![challenge7linked-list-kth](challenge7linked-list-kth.PNG)
+
+![challenge8ZIPLISTS](challenge8ZIPLISTS.PNG)
 
 
 ## Approach & Efficiency

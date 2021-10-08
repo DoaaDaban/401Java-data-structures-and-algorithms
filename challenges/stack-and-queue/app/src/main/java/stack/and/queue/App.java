@@ -3,12 +3,14 @@
  */
 package stack.and.queue;
 
+import java.io.IOException;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         System.out.println(new App().getGreeting());
 
@@ -19,13 +21,28 @@ public class App {
         stack.push("A");
         stack.push("A");
 
-        System.out.println(stack);
+//        System.out.println(stack.toString());
+//
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//
+//        System.out.println(stack.peek());
+
+        //===========================Queue=====================
+        Queue queue= new Queue();
+        queue.enqueue("D");
+        queue.enqueue("O");
+        queue.enqueue("A");
+        queue.enqueue("A");
+
+        System.out.println(queue);
+
+        System.out.println(queue.dequeue());
+
+        System.out.println(queue.peek());
 
 
-        System.out.println(stack.pop());
 
     }
-
-
 
 }

@@ -9,6 +9,9 @@ public class Node {
         this.data = data;
     }
 
+    public Node() {
+
+    }
 
 
     public String getData() {
@@ -33,5 +36,9 @@ public class Node {
                 "data='" + data + '\'' +
                 ", next=" + next +
                 '}';
+    }
+
+    public Node getNext() {
+        return next;
     }
 }

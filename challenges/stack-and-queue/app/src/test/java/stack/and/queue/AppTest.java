@@ -46,67 +46,70 @@ class AppTest {
 
         assertNotEquals("Stack { Null }",stackTest.toString());
         assertTrue(stackTest.isEmpty());
-//      assertEquals(IllegalArgumentException.class,stackTest.pop());
+  //      assertEquals(IllegalArgumentException.class,stackTest.pop());
 //      assertNull(stackTest.peek());
     }
 
-//    @Test
-//    public void peekStackTest(){
-//        Stack stackTest = new Stack();
-//        stackTest.push("D");
-//        stackTest.push("O");
-//        stackTest.push("A");
-//
-//        assertEquals("A",stackTest.peek());
-//        stackTest.pop();
-//        assertEquals("A",stackTest.peek());
-//    }
-//
-//    @Test
-//    public void enqueueToQueueTest(){
-//        Queue queueTest = new Queue();
-//        queueTest.enqueue("D");
-//        queueTest.enqueue("O");
-//        queueTest.enqueue("A");
-//        assertEquals("Queue { 11 --> 7 --> 2021 --> Null }",queueTest.toString());
-//    }
-//
-//    @Test
-//    public void dequeueFromQueueTest(){
-//        Queue queueTest = new Queue();
-//        queueTest.enqueue("D");
-//        queueTest.enqueue("O");
-//        queueTest.enqueue("A");
-//
-//        queueTest.dequeue();
-//        assertEquals("Queue { 7 --> 2021 --> Null }",queueTest.toString());
-//    }
-//    @Test(expected = IllegalArgumentException.class)
-//    public void emptyQueueTest(){
-//        Queue queueTest = new Queue();
-//        queueTest.enqueue("D");
-//        queueTest.enqueue("O");
-//        queueTest.enqueue("A");
-//
-//        queueTest.dequeue();
-//        queueTest.dequeue();
-//        queueTest.dequeue();
-//        assertTrue(queueTest.isEmpty());
-//        assertEquals("Queue { Null }",queueTest.toString());
-//        assertEquals( null,queueTest.dequeue());
-//        assertNull(queueTest.peek());
-//    }
-//
-//    @Test
-//    public void peekQueueTest(){
-//        Queue queueTest = new Queue();
-//        queueTest.enqueue("D");
-//        queueTest.enqueue("O");
-//        queueTest.enqueue("A");
-//
-//        assertEquals( java.util.Optional.of(11), java.util.Optional.ofNullable(queueTest.peek()));
-//        queueTest.dequeue();
-//        assertEquals(java.util.Optional.of(7),java.util.Optional.ofNullable(queueTest.peek()));
-//    }
+    @Test
+    public void peekStackTest(){
+        Stack stackTest = new Stack();
+        stackTest.push("D");
+        stackTest.push("O");
+        stackTest.push("A");
+
+        assertEquals("A",stackTest.peek());
+        stackTest.pop();
+        assertEquals("O",stackTest.peek());
+    }
+
+    @Test
+    public void enqueueToQueueTest(){
+        Queue queueTest = new Queue();
+        queueTest.enqueue("D");
+        queueTest.enqueue("O");
+        queueTest.enqueue("A");
+        assertEquals("Queue{front=Node{data='D', next=Node{data='O', next=Node{data='A', next=null}}}, rear=Node{data='A', next=null}}",queueTest.toString());
+    }
+
+    @Test
+    public void dequeueFromQueueTest(){
+        Queue queueTest = new Queue();
+        queueTest.enqueue("D");
+        queueTest.enqueue("O");
+        queueTest.enqueue("A");
+
+        queueTest.dequeue();
+        assertEquals("Queue{front=Node{data='O', next=Node{data='A', next=null}}, rear=Node{data='A', next=null}}",queueTest.toString());
+    }
+
+    // (expected = IllegalArgumentException.class)
+
+    @Test
+    public void emptyQueueTest(){
+        Queue queueTest = new Queue();
+        queueTest.enqueue("D");
+        queueTest.enqueue("O");
+        queueTest.enqueue("A");
+
+        queueTest.dequeue();
+        queueTest.dequeue();
+        queueTest.dequeue();
+        assertTrue(queueTest.isEmpty());
+        assertEquals("Queue{front=null, rear=Node{data='A', next=null}}",queueTest.toString());
+        assertEquals( "empty",queueTest.dequeue());
+      //  assertNull(queueTest.peek());
+    }
+
+    @Test
+    public void peekQueueTest(){
+        Queue queueTest = new Queue();
+        queueTest.enqueue("D");
+        queueTest.enqueue("O");
+        queueTest.enqueue("A");
+
+        assertEquals( java.util.Optional.of("D"), java.util.Optional.ofNullable(queueTest.peek()));
+        queueTest.dequeue();
+        assertEquals(java.util.Optional.of("O"),java.util.Optional.ofNullable(queueTest.peek()));
+    }
 
 }

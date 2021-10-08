@@ -36,7 +36,7 @@ public class Queue extends Node{
 
    public String peek(){
        if(isEmpty()){
-           return "empty" ;
+           throw new IllegalArgumentException("Empty");
        }else {
            return front.getData();
        }

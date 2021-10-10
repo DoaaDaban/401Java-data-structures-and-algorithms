@@ -35,7 +35,7 @@ This challenge is about how to Implement a Queue using two Stacks.
 
 ## Whiteboard Process
 
-![stack-queue-pseudo](challenge11- stack-queue-Pseudo.PNG)
+![challenge11StackQueuePseudo](challenge11StackQueuePseudo.PNG)
 
 # Checked List Of Stacks and Queues Code Challenge:
 

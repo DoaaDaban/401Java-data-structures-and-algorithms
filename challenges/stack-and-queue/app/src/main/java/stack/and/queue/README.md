@@ -28,6 +28,15 @@ This challenge about how to build and using the **Stack** and **Queue** to store
 
 * `isEmpty()` : Boolean indicating whether or not the queue is empty.
 
+
+# stack-queue-pseudo
+
+This challenge is about how to Implement a Queue using two Stacks.
+
+## Whiteboard Process
+
+![stack-queue-pseudo](challenge11- stack-queue-Pseudo.PNG)
+
 # Checked List Of Stacks and Queues Code Challenge:
 
 - [x] Create a Node class

@@ -42,7 +42,17 @@ public class App {
 
         System.out.println(queue.peek());
 
+        //==============================PsudoQueue=========================
+        PseudoQueue queue1 = new PseudoQueue();
 
+        queue1.enqueue("20");
+        queue1.enqueue("1");
+        queue1.enqueue("2");
+        queue1.enqueue("3");
+        queue1.enqueue("4");
+
+
+        System.out.println(queue1.dequeue());
 
     }
 

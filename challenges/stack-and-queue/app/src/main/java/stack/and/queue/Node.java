@@ -22,9 +22,7 @@ public class Node {
         this.data = data;
     }
 
-    public Node getNext(String value) {
-        return next;
-    }
+
 
     public void setNext(Node next) {
         this.next = next;

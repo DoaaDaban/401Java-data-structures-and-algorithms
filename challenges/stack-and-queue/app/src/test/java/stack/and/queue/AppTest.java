@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
+
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -46,8 +48,21 @@ class AppTest {
 
         assertNotEquals("Stack { Null }",stackTest.toString());
         assertTrue(stackTest.isEmpty());
-  //      assertEquals(IllegalArgumentException.class,stackTest.pop());
+//        assertEquals("Empty",stackTest.pop());
 //      assertNull(stackTest.peek());
+    }
+
+    @Test
+    public void whenExceptionThrown_thenAssertionSucceeds() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+       Stack stackTest= new Stack();
+            stackTest.peek();
+        });
+
+        String expectedMessage = "Empty";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
     }
 
     @Test

@@ -43,16 +43,43 @@ public class App {
         System.out.println(queue.peek());
 
         //==============================PsudoQueue=========================
-        PseudoQueue queue1 = new PseudoQueue();
-
-        queue1.enqueue("20");
-        queue1.enqueue("1");
-        queue1.enqueue("2");
-        queue1.enqueue("3");
-        queue1.enqueue("4");
 
 
-        System.out.println(queue1.dequeue());
+//        PseudoQueue queue1 = new PseudoQueue();
+//
+//        queue1.enqueue("20");
+//        queue1.enqueue("1");
+//        queue1.enqueue("2");
+//        queue1.enqueue("3");
+//        queue1.enqueue("4");
+//
+//
+//        System.out.println(queue1.dequeue());
+//
+
+        //==============================code challenge 12=================================
+
+        AnimalShelter shelter = new AnimalShelter();
+
+        shelter.enqueue(new Cat("looz"));
+        shelter.enqueue(new Cat("sugar"));
+        shelter.enqueue(new Cat("mejhem"));
+
+
+        shelter.enqueue(new Dog("oklah"));
+        shelter.enqueue(new Dog("oreo"));
+        shelter.enqueue(new Dog("husky"));
+
+        System.out.println(shelter);
+        System.out.println(shelter.catQueue.peek().toString());
+
+        shelter.dequeue("cat");
+        System.out.println(shelter);
+
+        shelter.dequeue("dog");
+        System.out.println(shelter);
+
+
 
     }
 

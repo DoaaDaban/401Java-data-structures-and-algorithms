@@ -1,57 +1,59 @@
 package stack.and.queue;
 
-import java.io.IOException;
+public class Stack<T> {
 
-public class Stack {
-
-    private Node top;
-
-    public Stack(Node top) {
-        this.top = top;
-    }
-
-    public Stack() {
-    }
+    Node<T> top;
 
     public void push(String value){
-        if(isEmpty()){
-            Node node= new Node(value);
-            top= node;
+        Node<T> newNode = new Node(value);
+        if (top == null){
+            top = newNode;
         }else{
-            Node node= new Node(value);
-            node.setNext(top);
-            top= node;
+            Node temp = top;
+            top = newNode;
+            newNode.next = temp;
         }
+//        System.out.println("The value " + value + " pushed to the Stack");
     }
 
-    public String pop(){
-    if (isEmpty()){
-        throw new IllegalArgumentException("Empty");
-    }else {
-        String data = top.getData();
-        top = top.getNext();
-        return data;
-    }
-    }
+    public int pop() {
 
+        int popped=0;
 
-    public String peek(){
-        if(isEmpty()){
+        if(top == null){
             throw new IllegalArgumentException("Empty");
-        }else {
-//            Node node= new Node(top.getData());
-            return top.getData();
+        }else{
+            popped = (int) top.getData();
+            top = top.next;
+        }
+        return popped;
+    }
+
+    public int peek(){
+        if(top == null){
+            throw new IllegalArgumentException("Empty");
+        }else{
+            return (int) top.getData();
         }
     }
 
     public boolean isEmpty(){
-        return top==null;
+        if(top == null){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override
     public String toString() {
-        return "Stack{" +
-                "top=" + top +
-                '}';
+        String stackValue = "Stack { ";
+        Node trav = top;
+        while (trav != null){
+            stackValue += trav.getData() + " --> ";
+            trav=trav.next;
+        }
+        stackValue += "Null }";
+        return stackValue;
     }
 }

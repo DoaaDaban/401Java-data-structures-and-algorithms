@@ -37,6 +37,8 @@ This challenge is about how to Implement a Queue using two Stacks.
 
 ![challenge11StackQueuePseudo](challenge11StackQueuePseudo.PNG)
 
+![Challenge12-stackQueueAnimal](Challenge12-stackQueueAnimal.PNG)
+
 # Checked List Of Stacks and Queues Code Challenge:
 
 - [x] Create a Node class

@@ -79,7 +79,12 @@ public class App {
         shelter.dequeue("dog");
         System.out.println(shelter);
 
+        //    ==================================code challenge 13 ==================================
 
+        ValidateBrackets a = new ValidateBrackets();
+
+        System.out.println(a.validateBrackets(")"));
+        System.out.println(a.validateBrackets("{}{{}}"));
 
     }
 

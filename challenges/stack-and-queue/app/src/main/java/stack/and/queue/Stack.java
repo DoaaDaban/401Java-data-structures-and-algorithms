@@ -4,7 +4,7 @@ public class Stack<T> {
 
     Node<T> top;
 
-    public void push(String value){
+    public void push(int value){
         Node<T> newNode = new Node(value);
         if (top == null){
             top = newNode;

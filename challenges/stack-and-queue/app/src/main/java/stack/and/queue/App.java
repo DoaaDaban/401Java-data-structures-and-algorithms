@@ -86,6 +86,17 @@ public class App {
         System.out.println(a.validateBrackets(")"));
         System.out.println(a.validateBrackets("{}{{}}"));
 
+        //    ==================================code challenge 14 ==================================
+
+
+        MaxStack maxStack= new MaxStack();
+        maxStack.push(3);
+        maxStack.push(5);
+        maxStack.push(7);
+        maxStack.push(2);
+
+        System.out.println(maxStack.getMax());
+
     }
 
 }

@@ -1,73 +1,62 @@
 package stack.and.queue;
 
-public class Queue extends Node{
-    public Queue(String data) {
-        super(data);
+public class Queue<T>  {
+    Node<T> front;
+    Node<T> rear;
+
+    public Queue(){
+        this.front = this.rear = null;
     }
 
-    public Queue() {
-        super();
+    public void enqueue(T value){
+        Node<T> newNode = new Node<>(value);
+
+        if(this.rear == null){
+            this.front = this.rear = newNode;
+        }
+
+        this.rear.next = newNode;
+        this.rear = newNode;
     }
 
-    private Node front;
-   private Node rear;
+    public T dequeue() {
 
-   public void enqueue(String data){
-       if(isEmpty()){
-           Node node= new Node(data);
-           front =node;
-           rear =node;
-       }else {
-           Node node= new Node(data);
-           rear.setNext(node);
-           rear=node;
-       }
-   }
+        if(this.front == null){
+            System.out.println("No values to dequeue, the queue is empty");
+            return null;
+        }else{
+            Node temp = this.front;
+            this.front = this.front.next;
+            return (T) temp.getData();
+        }
+    }
 
-   public String dequeue(){
-       if(isEmpty()){
-           return "empty";
-       }else {
-           String data= front.getData();
-           front= front.getNext();
-           return data;
-       }
-   }
+    public T peek(){
+        if(front == null){
+            throw new IllegalArgumentException("Empty");
+        }else{
+            return front.getData();
+        }
+    }
 
-   public String peek(){
-       if(isEmpty()){
-           throw new IllegalArgumentException("Empty");
-       }else {
-           return front.getData();
-       }
-   }
-
-
-   public Boolean isEmpty(){
-       return front ==null;
-   }
+    public boolean isEmpty(){
+        if(front == null){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     @Override
     public String toString() {
-        return "Queue{" +
-                "front=" + front +
-                ", rear=" + rear +
-                '}';
-    }
-
-    public Node getFront() {
-        return front;
-    }
-
-    public void setFront(Node front) {
-        this.front = front;
-    }
-
-    public Node getRear() {
-        return rear;
-    }
-
-    public void setRear(Node rear) {
-        this.rear = rear;
+        String queueValue = "Queue { ";
+        Node trav = front;
+        while (trav != null){
+            queueValue += trav.getData() + " --> ";
+            trav = trav.next;
+        }
+        queueValue += "Null }";
+        return queueValue;
     }
 }
+

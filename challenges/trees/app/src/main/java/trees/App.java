@@ -11,19 +11,19 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
-        BinarySearchTree<Integer> binarySearchTree= new BinarySearchTree<Integer>();
+        BinaryTree<Integer> binaryTree = new BinaryTree<Integer>();
 
-        binarySearchTree.insert(50);
-        binarySearchTree.insert(10);
-        binarySearchTree.insert(60);
-        binarySearchTree.insert(5);
-//        binarySearchTree.insert(20);
-//        binarySearchTree.insert(55);
-//        binarySearchTree.insert(70);
+        binaryTree.insert(50);
+        binaryTree.insert(10);
+        binaryTree.insert(60);
+        binaryTree.insert(5);
+        binaryTree.insert(20);
+        binaryTree.insert(55);
+        binaryTree.insert(70);
 
-        System.out.println(binarySearchTree);
+        System.out.println(binaryTree);
 
-        BinarySearchTree<String> Doaa= new BinarySearchTree<>();
+        BinaryTree<String> Doaa= new BinaryTree<>();
         Doaa.insert("D");
         Doaa.insert("O");
         Doaa.insert("A");
@@ -31,17 +31,17 @@ public class App {
         Doaa.insert("C");
 
         System.out.println("Inorder traversal of numbers" + " ");
-        binarySearchTree.inorderTraversal();
+        binaryTree.inorderTraversal();
 
         System.out.println(" ");
 
         System.out.println("pre traversal of numbers" + " ");
-        binarySearchTree.preorderTraversal();
+        binaryTree.preorderTraversal();
 
         System.out.println(" ");
 
         System.out.println("post traversal of numbers" + " ");
-        binarySearchTree.postorderTraversal();
+        binaryTree.postorderTraversal();
 
     }
 }

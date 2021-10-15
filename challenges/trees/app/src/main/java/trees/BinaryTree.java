@@ -1,6 +1,9 @@
 package trees;
 
-public class BinaryTree<T extends Comparable<T>>{
+import java.util.ArrayList;
+import java.util.List;
+
+public class BinaryTree<T>{
 
     private BinaryNode<T> root;
 
@@ -8,95 +11,81 @@ public class BinaryTree<T extends Comparable<T>>{
 
     }
 
-    public void insert(T data){
+    public List<T> preorderTraversal(){
         if(isEmpty()){
-            root = new BinaryNode<>(data);
-//            root = binaryNode;
-        }else{
-            insertHepler(data, root);
+            return null;
         }
+        List<T> list = new ArrayList<>();
+        traversePreOrder(root, list);
+        return list;
     }
 
-    public void preorderTraversal(){
+    public List<T> inorderTraversal(){
         if(isEmpty()){
-            return;
+            return null;
         }
-        traversePreOrder(root);
+        List<T> list = new ArrayList<>();
+        traverseInorder(root, list);
+        return list;
     }
 
-    public void inorderTraversal(){
+    public List<T> postorderTraversal(){
         if(isEmpty()){
-            return;
+            return null;
         }
-        traverseInorder(root);
+        List<T> list = new ArrayList<>();
+        traversePostOrder(root, list);
+        return list;
     }
 
-    public void postorderTraversal(){
-        if(isEmpty()){
-            return;
-        }
-        traversePostOrder(root);
-    }
+    //===========================
 
-    public void traversePreOrder(BinaryNode<T> root){ //  root -> left -> right
+
+    public void traversePreOrder(BinaryNode<T> root, List<T> list){ //  root -> left -> right
         // visit / print the root of the tree (root could be a sub-tree)
-        System.out.print(root.getData() + " -> ");
+//        System.out.print(root.getData() + " -> ");
+        list.add(root.getData());
 
         if (root.getLeftNode() != null){ // traverse left
-            traversePreOrder(root.getLeftNode());
+            traversePreOrder(root.getLeftNode(), list);
         }
 
         if (root.getRightNode() != null){
-            traversePreOrder(root.getRightNode());
+            traversePreOrder(root.getRightNode(), list);
         }
     }
 
 
-    public void traverseInorder(BinaryNode<T> root){ // left -> root -> right
+    public void traverseInorder(BinaryNode<T> root, List<T> list){ // left -> root -> right
         if (root.getLeftNode() != null){ // traverse left
-            traverseInorder(root.getLeftNode());
+            traverseInorder(root.getLeftNode(), list);
         }
 
         // visit / print the root of the tree (root could be a sub-tree)
-        System.out.print(root.getData() + " -> ");
+//        System.out.print(root.getData() + " -> ");
+        list.add(root.getData());
 
         if (root.getRightNode() != null){
-            traverseInorder(root.getRightNode());
+            traverseInorder(root.getRightNode(), list);
         }
     }
 
-    public void traversePostOrder(BinaryNode<T> root){ // left -> right -> root
+    public void traversePostOrder(BinaryNode<T> root, List<T> list){ // left -> right -> root
         if (root.getLeftNode() != null){ // traverse left
-            traversePostOrder(root.getLeftNode());
+            traversePostOrder(root.getLeftNode(), list);
         }
 
         if (root.getRightNode() != null){
-            traversePostOrder(root.getRightNode());
+            traversePostOrder(root.getRightNode(), list);
         }
 
         // visit / print the root of the tree (root could be a sub-tree)
-        System.out.print(root.getData() + " -> ");
+//        System.out.print(root.getData() + " -> ");
+        list.add(root.getData());
 
     }
 
 
-
-    public void insertHepler(T data, BinaryNode<T> root) {
-        BinaryNode<T> binaryNode = new BinaryNode<>(data);
-        if (data.compareTo(root.getData()) < 0) {
-            if (root.getLeftNode() == null) {
-                root.setLeftNode(binaryNode);
-            } else {
-                insertHepler(data, root.getLeftNode());
-            }
-        } else if (data.compareTo(root.getData()) > 0) {
-            if (root.getRightNode() == null) {
-                root.setRightNode(binaryNode);
-            } else {
-                insertHepler(data, root.getRightNode());
-            }
-        }
-    }
     public boolean isEmpty(){
         return root==null;
     }

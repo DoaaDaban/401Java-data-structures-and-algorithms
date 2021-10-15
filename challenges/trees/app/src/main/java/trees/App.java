@@ -11,37 +11,35 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
-        BinaryTree<Integer> binaryTree = new BinaryTree<Integer>();
+        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<Integer>();
 
-        binaryTree.insert(50);
-        binaryTree.insert(10);
-        binaryTree.insert(60);
-        binaryTree.insert(5);
-        binaryTree.insert(20);
-        binaryTree.insert(55);
-        binaryTree.insert(70);
+        binarySearchTree.Add(50);
+        binarySearchTree.Add(10);
+        binarySearchTree.Add(60);
+        binarySearchTree.Add(5);
+        binarySearchTree.Add(20);
+        binarySearchTree.Add(55);
+        binarySearchTree.Add(70);
 
-        System.out.println(binaryTree);
-
-        BinaryTree<String> Doaa= new BinaryTree<>();
-        Doaa.insert("D");
-        Doaa.insert("O");
-        Doaa.insert("A");
-        Doaa.insert("A");
-        Doaa.insert("C");
+//        BinarySearchTree<String> Doaa= new BinarySearchTree<>();
+//        Doaa.Add("D");
+//        Doaa.Add("O");
+//        Doaa.Add("A");
+//        Doaa.Add("A");
+//        Doaa.Add("C");
 
         System.out.println("Inorder traversal of numbers" + " ");
-        binaryTree.inorderTraversal();
+        binarySearchTree.inorderTraversal();
 
         System.out.println(" ");
 
         System.out.println("pre traversal of numbers" + " ");
-        binaryTree.preorderTraversal();
+        binarySearchTree.preorderTraversal();
 
         System.out.println(" ");
 
         System.out.println("post traversal of numbers" + " ");
-        binaryTree.postorderTraversal();
+        binarySearchTree.postorderTraversal();
 
     }
 }

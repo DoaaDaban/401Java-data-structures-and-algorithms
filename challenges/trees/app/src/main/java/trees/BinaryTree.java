@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BinaryTree<T>{
 
-    private BinaryNode<T> root;
+    protected BinaryNode<T> root;
 
     public BinaryTree() {
 

@@ -2,12 +2,11 @@ package trees;
 
 public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> implements Comparable<BinarySearchTree<T>> {
 
-    BinaryNode<T> root;
     private boolean validator;
 
     public void Add(T data){
         if(isEmpty()){
-            root = new BinaryNode<>(data);
+           root = new BinaryNode<>(data);
 //            root = binaryNode;
         }else{
             AddHelper(data, root);

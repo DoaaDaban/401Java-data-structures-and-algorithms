@@ -28,18 +28,17 @@ public class App {
 //        Doaa.Add("A");
 //        Doaa.Add("C");
 
-        System.out.println("Inorder traversal of numbers" + " ");
-        binarySearchTree.inorderTraversal();
+        System.out.println("Inorder traversal of numbers " + binarySearchTree.inorderTraversal());
 
         System.out.println(" ");
 
-        System.out.println("pre traversal of numbers" + " ");
-        binarySearchTree.preorderTraversal();
+        System.out.println("pre traversal of numbers " + binarySearchTree.preorderTraversal());
 
         System.out.println(" ");
 
-        System.out.println("post traversal of numbers" + " ");
-        binarySearchTree.postorderTraversal();
+        System.out.println("post traversal of numbers " +  binarySearchTree.postorderTraversal());
+
+        System.out.println(binarySearchTree.Contains(5));
 
     }
 }

@@ -37,7 +37,7 @@ The approach is simple we compare the node data and add nodes to the tree based 
 # Challenge 16 : To find the maximum value in the tree
 
 ## Whiteboard Process
-
+![challenge16treeMax](challenge16treeMax.PNG)
 
 ## Approach & Efficiency
 Implemented a max method that returns an integer, Saved the traversed data into a list and loop through the list and find

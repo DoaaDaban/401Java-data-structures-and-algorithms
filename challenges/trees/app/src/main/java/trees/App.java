@@ -13,13 +13,15 @@ public class App {
 
         BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<Integer>();
 
-        binarySearchTree.Add(50);
-        binarySearchTree.Add(10);
-        binarySearchTree.Add(60);
+        binarySearchTree.Add(2);
+        binarySearchTree.Add(7);
         binarySearchTree.Add(5);
-        binarySearchTree.Add(20);
-        binarySearchTree.Add(55);
-        binarySearchTree.Add(70);
+        binarySearchTree.Add(6);
+        binarySearchTree.Add(11);
+        binarySearchTree.Add(4);
+        binarySearchTree.Add(9);
+
+        System.out.println(binarySearchTree.FindMax());
 
 //        BinarySearchTree<String> Doaa= new BinarySearchTree<>();
 //        Doaa.Add("D");

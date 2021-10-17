@@ -1,14 +1,27 @@
 package trees;
 
+import java.util.List;
+
 public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> implements Comparable<BinarySearchTree<T>> {
 
     private boolean validator;
 
-    public void Add(T data){
-        if(isEmpty()){
-           root = new BinaryNode<>(data);
+    public int FindMax(){
+        List<Integer> myList = (List<Integer>) this.preorderTraversal();
+        int max = Integer.MIN_VALUE;
+        for (Integer integer : myList) {
+            if (integer > max) {
+                max = integer;
+            }
+        }
+        return max;
+    }
+
+    public void Add(T data) {
+        if (isEmpty()) {
+            root = new BinaryNode<>(data);
 //            root = binaryNode;
-        }else{
+        } else {
             AddHelper(data, root);
         }
     }
@@ -30,28 +43,28 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> imp
         }
     }
 
-    public boolean Contains(T data){
+    public boolean Contains(T data) {
 
         validator = false;
         containsHelper(data, root);
         return validator;
     }
 
-    public void containsHelper(T data, BinaryNode<T> root){
-        if (data== root.getData()){
-            validator= true;
+    public void containsHelper(T data, BinaryNode<T> root) {
+        if (data == root.getData()) {
+            validator = true;
         }
-        if(root.getLeftNode() != null ){
+        if (root.getLeftNode() != null) {
             containsHelper(data, root.getLeftNode());
         }
-        if(root.getRightNode() != null ){
+        if (root.getRightNode() != null) {
             containsHelper(data, root.getRightNode());
         }
 
     }
 
 
-    public BinarySearchTree(){
+    public BinarySearchTree() {
     }
 
     @Override

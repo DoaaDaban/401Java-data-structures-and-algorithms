@@ -8,7 +8,7 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
 
         BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<Integer>();
@@ -20,6 +20,17 @@ public class App {
         binarySearchTree.Add(11);
         binarySearchTree.Add(4);
         binarySearchTree.Add(9);
+
+        BinarySearchTree<Integer> breadthTree = new BinarySearchTree();
+
+        breadthTree.Add(20);
+        breadthTree.Add(70);
+        breadthTree.Add(40);
+        breadthTree.Add(60);
+        breadthTree.Add(50);
+
+
+        System.out.println(breadthTree.breadthFirst(breadthTree));
 
         System.out.println(binarySearchTree.FindMax());
 
@@ -41,6 +52,11 @@ public class App {
         System.out.println("post traversal of numbers " +  binarySearchTree.postorderTraversal());
 
         System.out.println(binarySearchTree.Contains(5));
+
+
+
+
+
 
     }
 }

@@ -104,4 +104,20 @@ class AppTest {
         });
     }
 
+    @Test
+    public void testbreadthFirst() throws Exception {
+        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<Integer>();
+
+        // adds nodes to the tree
+        binarySearchTree.setRoot(new BinaryNode<>(1));
+        binarySearchTree.getRoot().setLeftNode(new BinaryNode(2));
+        binarySearchTree.getRoot().setRightNode(new BinaryNode(3));
+        binarySearchTree.getRoot().getRightNode().setLeftNode(new BinaryNode<>(10));
+        binarySearchTree.getRoot().getRightNode().setRightNode(new BinaryNode<>(41));
+        binarySearchTree.getRoot().getLeftNode().setLeftNode(new BinaryNode<>(4));
+        binarySearchTree.getRoot().getLeftNode().setRightNode(new BinaryNode<>(8));
+
+        assertEquals("[1, 2, 3, 4, 8, 10, 41]","[1, 2, 3, 4, 8, 10, 41]","" + binarySearchTree.breadthFirst(binarySearchTree));
+    }
+
 }

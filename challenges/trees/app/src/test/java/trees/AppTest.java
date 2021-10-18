@@ -3,6 +3,7 @@
  */
 package trees;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -74,6 +75,33 @@ class AppTest {
         assertFalse(bst.Contains(7));
         assertTrue(bst.Contains(14));
         assertFalse(bst.Contains(100));
+    }
+
+    // Test max method
+
+    @Test
+    public void maxValueTest(){
+        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<Integer>();
+
+        binarySearchTree.setRoot(new BinaryNode<>(7));
+        assertEquals(7,binarySearchTree.FindMax());
+
+        binarySearchTree.getRoot().setLeftNode(new BinaryNode<>(9));
+        binarySearchTree.getRoot().setRightNode(new BinaryNode<>(11));
+        assertEquals(11,binarySearchTree.FindMax());
+
+        binarySearchTree.getRoot().getLeftNode().setLeftNode(new BinaryNode<>(13));
+        binarySearchTree.getRoot().getLeftNode().setRightNode(new BinaryNode<>((1)));
+        assertEquals(13,binarySearchTree.FindMax());
+    }
+
+    //    Test for empty tree
+    @Test
+    public void testMaxEmptyTree() {
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<Integer>();
+            binarySearchTree.FindMax();
+        });
     }
 
 }

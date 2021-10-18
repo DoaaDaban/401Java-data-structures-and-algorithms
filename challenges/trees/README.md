@@ -6,7 +6,7 @@ Trees are a data structure that made of nodes, each node has its own maximum num
 
 Binary search trees are rooted binary trees data structure which internal nodes each store a key greater than all the keys in the node’s left subtree and less than those in its right subtree.
 
-## Challenge
+## Challenge 15
 
 <!-- Description of the challenge -->
 
@@ -33,3 +33,19 @@ The approach is simple we compare the node data and add nodes to the tree based 
 - BinarySearchTree.Add() => This api is used to add a new node to the tree in the correct location
 
 - BinarySearchTree.Contain() => This api is used to search for data inside the tree and returns a boolean indicating whether the data is in the tree or not.
+
+# Challenge 16 : To find the maximum value in the tree
+
+## Whiteboard Process
+![challenge16treeMax](challenge16treeMax.PNG)
+
+## Approach & Efficiency
+Implemented a max method that returns an integer, Saved the traversed data into a list and loop through the list and find
+the maximum value and return it.
+
+Space O(n)
+Time O(n)
+
+## Solution
+- Make an object of the Binary Tree and add elements to it.
+- Call the max method to find the maximum value in the tree.

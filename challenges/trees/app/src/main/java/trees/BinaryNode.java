@@ -11,6 +11,10 @@ public class BinaryNode<T>{
         this.data = data;
     }
 
+    public BinaryNode() {
+
+    }
+
     public T getData() {
         return data;
     }

@@ -1,10 +1,34 @@
 package trees;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> implements Comparable<BinarySearchTree<T>> {
 
     private boolean validator;
+
+    public List<T> breadthFirst(BinarySearchTree<T> tree) throws Exception {
+        if(root==null) {
+            return null;
+        }
+        Queue<BinaryNode<T>>queue = new Queue<>();
+        List<T> list = new ArrayList<>();
+        queue.enqueue(root);
+        list.add((T) root.getData());
+        while (!queue.isEmpty()){
+                BinaryNode<T> node = queue.dequeue();
+                if(node.getLeftNode()!=null){
+                    queue.enqueue(node.getLeftNode());
+                    list.add((T) node.getLeftNode().getData());
+                }
+                if(node.getRightNode()!=null){
+                    queue.enqueue(node.getRightNode());
+                    list.add((T) node.getRightNode().getData());
+                }
+        }
+        return list;
+    }
+
 
     public int FindMax(){
         List<Integer> myList = (List<Integer>) this.preorderTraversal();

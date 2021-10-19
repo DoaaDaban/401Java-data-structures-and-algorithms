@@ -49,3 +49,12 @@ Time O(n)
 ## Solution
 - Make an object of the Binary Tree and add elements to it.
 - Call the max method to find the maximum value in the tree.
+
+
+# Challenge 17: tree-breadth-first
+
+Write a method that accepts a tree as an argument and return list of all values in the tree, in the order they were encountered.
+
+## Whiteboard Process
+
+![tree-breadth-first](challenge17treeBreadthFirst.PNG)

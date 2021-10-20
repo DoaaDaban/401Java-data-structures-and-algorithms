@@ -11,6 +11,11 @@ public class BinaryTree<T>{
 
     }
 
+    List<Integer> postOrderList = new ArrayList<>();
+    List<Integer> inOrderList = new ArrayList<>();
+    List<Integer> preOrderList = new ArrayList<>();
+
+
     public List<T> preorderTraversal(){
         if(isEmpty()){
             return null;

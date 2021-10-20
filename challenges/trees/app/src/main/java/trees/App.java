@@ -34,6 +34,7 @@ public class App {
 
         System.out.println(binarySearchTree.FindMax());
 
+
 //        BinarySearchTree<String> Doaa= new BinarySearchTree<>();
 //        Doaa.Add("D");
 //        Doaa.Add("O");
@@ -53,10 +54,21 @@ public class App {
 
         System.out.println(binarySearchTree.Contains(5));
 
+     // ========================================
 
+        BinarySearchTree<Integer> sumbinarySearchTree = new BinarySearchTree<Integer>();
 
+        sumbinarySearchTree.Add(1);
+        sumbinarySearchTree.Add(3);
+        sumbinarySearchTree.Add(6);
+        sumbinarySearchTree.Add(10);
+        sumbinarySearchTree.Add(4);
+        sumbinarySearchTree.Add(7);
+        sumbinarySearchTree.Add(8);
+        sumbinarySearchTree.Add(13);
+        sumbinarySearchTree.Add(14);
 
-
+        System.out.println(sumbinarySearchTree.sumOddValues(sumbinarySearchTree));
 
     }
 }

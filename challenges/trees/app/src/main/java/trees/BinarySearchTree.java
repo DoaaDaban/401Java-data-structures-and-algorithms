@@ -7,6 +7,27 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> imp
 
     private boolean validator;
 
+
+    //        <<< Code Challenge 19 - question-1 >>>
+
+    public int sumOddValues(BinarySearchTree tree) {
+
+        if(root == null){
+            throw new IllegalArgumentException("the tree is empty");
+        }
+
+        int oddSum = 0;
+        traversePostOrder(tree.getRoot(), (List<T>) postOrderList);
+
+        for(int i = 0; i<postOrderList.size(); i++){
+            if(postOrderList.get(i) % 2 != 0){
+                oddSum = postOrderList.get(i) + oddSum;
+            }
+        }
+        return oddSum;
+    }
+
+
     public List<T> breadthFirst(BinarySearchTree<T> tree) throws Exception {
         if(root==null) {
             return null;

@@ -58,3 +58,13 @@ Write a method that accepts a tree as an argument and return list of all values 
 ## Whiteboard Process
 
 ![tree-breadth-first](challenge17treeBreadthFirst.PNG)
+
+# Challenge 19: Sum of odd BST
+
+write a methof to Find the sum of all the odd numbers in a binary search tree.
+
+## Whiteboard Process
+
+![SumofoddBST](challenge19SumOfOddBST.PNG)
+
+challenge19SumOfOddBST.PNG

@@ -67,4 +67,12 @@ write a methof to Find the sum of all the odd numbers in a binary search tree.
 
 ![SumofoddBST](challenge19SumOfOddBST.PNG)
 
-challenge19SumOfOddBST.PNG
+# Challenge 18: FizzBuzz Tree
+
+Write a function called fizz buzz tree takes k-ary tree as an argument and return new k-ary tree. Determine whether or not the value of each node is divisible by 3, 5 or both.
+
+## Whiteboard Process
+
+![FizzBuzz](challenge18FizzBuzz.PNG)
+
+

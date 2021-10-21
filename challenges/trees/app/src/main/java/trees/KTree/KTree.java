@@ -48,7 +48,6 @@ public class KTree <T>{
         }
     }
 
-
     public  KTree<String> fizzBuzzTree(KTree<Integer> kTree){
         KTree<String> outTree = new KTree(kTree.K);
 

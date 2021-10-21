@@ -3,6 +3,8 @@
  */
 package trees;
 
+import trees.KTree.KTree;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -54,7 +56,7 @@ public class App {
 
         System.out.println(binarySearchTree.Contains(5));
 
-     // ========================================
+     // <challenge19>
 
         BinarySearchTree<Integer> sumbinarySearchTree = new BinarySearchTree<Integer>();
 
@@ -69,6 +71,22 @@ public class App {
         sumbinarySearchTree.Add(14);
 
         System.out.println(sumbinarySearchTree.sumOddValues(sumbinarySearchTree));
+
+
+        //        <<< Code Challenge 18 >>>
+
+        KTree kTree = new KTree(1);
+
+        kTree.add(1);
+        kTree.add(5);
+        kTree.add(20);
+        kTree.add(21);
+        kTree.add(6);
+        kTree.add(15);
+
+        System.out.println(kTree);
+        System.out.println(kTree.fizzBuzzTree(kTree));
+
 
     }
 }

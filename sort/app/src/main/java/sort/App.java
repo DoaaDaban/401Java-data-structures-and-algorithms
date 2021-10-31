@@ -3,12 +3,21 @@
  */
 package sort;
 
+import sort.insertion.InsertionSort;
+
+import java.util.Arrays;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+//        <<< COde Challenge 26 >>>
+
+        int[] arr = {8, 4, 23, 42, 16, 15};
+
+        InsertionSort insertionSort = new InsertionSort();
+        insertionSort.insertionSort(arr);
+
+        System.out.println(Arrays.toString(arr));
     }
 }

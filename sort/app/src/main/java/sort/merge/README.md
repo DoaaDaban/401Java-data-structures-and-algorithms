@@ -3,7 +3,7 @@ Implement merge sort by following up a pseudo Code
 Recursivley.
 
 ## Whiteboard Process
-![Photo](white.png)
+![Photo](./image/cc27MergeSort.PNG)
 
 ## Approach & Efficiency
 Time O(nlogn)

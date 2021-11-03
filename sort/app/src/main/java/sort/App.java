@@ -5,6 +5,7 @@ package sort;
 
 import sort.insertion.InsertionSort;
 import sort.merge.MergeSort;
+import sort.quick.QuickSort;
 
 import java.util.Arrays;
 
@@ -28,5 +29,14 @@ public class App {
 
         mergeSort.mergeSort(mergeArr);
         System.out.println("Merge Array " + Arrays.toString(mergeArr));
+
+
+        //        <<< COde Challenge 28 >>>
+
+        int[] quickSortArr = {8, 4, 23, 42, 16, 15};
+        QuickSort quickSort = new QuickSort();
+
+        quickSort.quickSort(quickSortArr,0,5);
+        System.out.println("Quick sort" + Arrays.toString(quickSortArr));
     }
 }

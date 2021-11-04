@@ -4,6 +4,7 @@
 package HashTabels;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -30,7 +31,5 @@ class AppTest {
 
         clubs.remove("Real Madrid");
         assertTrue(clubs.isEmpty());
-
-
     }
 }

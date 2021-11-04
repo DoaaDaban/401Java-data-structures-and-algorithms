@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class HashTable<K, V> {
 
-
     private ArrayList<HashNode<K, V>> bucketArray;
 
     private int numBuckets;
@@ -43,7 +42,6 @@ public class HashTable<K, V> {
     public boolean isEmpty() {
         return getSize() == 0;
     }
-
 
     public void add(K key, V value) {
 

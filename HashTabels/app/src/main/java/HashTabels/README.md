@@ -17,3 +17,11 @@ Implement a Hashtable Clas
 * `remove(K key)`: remove the value from the table based on the key.
 
 * `isEmpty()`: check the hash table is empty or not.
+
+# hashmap-repeated-word CC31
+
+Write a function that accepted a string parameter which  finds the first word to occur more than once in a string and return a string.
+
+## Whiteboard Process
+
+![hashmap-repeated-word](/images/code-challeng-31.png)

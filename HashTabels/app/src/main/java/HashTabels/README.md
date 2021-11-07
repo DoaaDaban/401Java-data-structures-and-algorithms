@@ -24,4 +24,4 @@ Write a function that accepted a string parameter which  finds the first word to
 
 ## Whiteboard Process
 
-![hashmap-repeated-word](/images/code-challeng-31.png)
+![hashmap-repeated-word](images/code-challeng-31.png)

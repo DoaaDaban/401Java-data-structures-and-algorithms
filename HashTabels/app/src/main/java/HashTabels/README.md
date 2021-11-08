@@ -26,3 +26,13 @@ Write a function that accepted a string parameter which  finds the first word to
 
 ![hashmap-repeated-word](images/code-challeng-31.png)
 
+# hashmap-tree-intersection CC32
+
+Create a method that takes two binary trees as a parameter and return an array of nodes that are similar in two trees.
+
+## Whiteboard Process
+
+![hashmap-tree-intersection](images/code-challeng-32.png)
+
+
+

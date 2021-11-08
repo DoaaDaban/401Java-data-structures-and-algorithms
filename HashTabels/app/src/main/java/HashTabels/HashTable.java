@@ -1,6 +1,11 @@
 package HashTabels;
 
+import HashTabels.binaryTree.Node;
+import HashTabels.binaryTree.BinaryTree;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 public class HashTable<K, V> {
@@ -133,6 +138,53 @@ public class HashTable<K, V> {
             throw new IllegalArgumentException("Cannot find a null key.");
         }
         return get(key) != null;
+    }
+
+    //    <<< Code Challenge 32 >>>
+
+    public HashMap<Integer,Integer> hashMap = new HashMap<>();
+    public List<Integer> intersections = new ArrayList<>();
+
+    public List<Integer> treeIntersection(BinaryTree tree1, BinaryTree tree2){
+
+        if (tree1.getRoot() == null || tree2.getRoot()  == null) {
+            return null;
+        }
+
+        traverse(tree2.getRoot() );
+
+        compare(tree1.getRoot() );
+
+        return intersections;
+    }
+
+    public void traverse(Node node) {
+
+        if (node != null) {
+
+            int count = 0 ;
+            if(hashMap.get(node.getKey()) == null){
+                count = 1;
+            }else{
+                count = count +1;
+            }
+
+            hashMap.put(node.getKey(),count);
+
+            traverse(node.getLeft());
+            traverse(node.getRight());
+        }
+    }
+
+    public void compare(Node node){
+        if (node != null) {
+            if (hashMap.get(node.getKey()) != null){
+                intersections.add(node.getKey());
+            }
+            compare(node.getLeft());
+            compare(node.getRight());
+        }
+
     }
 
 }

@@ -11,97 +11,120 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
 
     @Test
-    public void test(){
+    public void test() {
 
         HashTable<String, Integer> clubs = new HashTable<String, Integer>();
 
         assertTrue(clubs.isEmpty());
 
-        clubs.add("Real Madrid",100);
-        assertEquals(1,clubs.getSize());
+        clubs.add("Real Madrid", 100);
+        assertEquals(1, clubs.getSize());
 
         clubs.add("Barcelona", 200);
-        assertEquals(2,clubs.getSize());
+        assertEquals(2, clubs.getSize());
         assertFalse(clubs.isEmpty());
 
         clubs.remove("Barcelona");
-        assertEquals(1,clubs.getSize());
+        assertEquals(1, clubs.getSize());
 
         assertTrue(clubs.contains("Real Madrid"));
         assertFalse(clubs.contains("Man United"));
 
         clubs.remove("Real Madrid");
         assertTrue(clubs.isEmpty());
-
     }
 
-    //    <<< Code Challenge 32 >>>
+    //    <<< Code Challenge 31 >>>
 
     @Test
-    public void intersectionTreeTest(){
+    public void repeatedWordTest() {
 
-        HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
-        BinaryTree tree1 = new BinaryTree();
-        BinaryTree tree2 = new BinaryTree();
+        HashTable<String, Integer> test = new HashTable<String, Integer>();
 
-        tree1.setRoot(new Node(150));
-        tree1.getRoot().setLeft(new Node(100));
-        tree1.getRoot().setRight(new Node(250));
-        tree1.getRoot().getRight().setLeft(new Node(200));
-        tree1.getRoot().getRight().setRight(new Node(350));
+        String paragraph1 = "Once upon a time, there was a brave princess who...";
+        assertEquals("a", test.repeatedWord(paragraph1));
 
-        tree2.setRoot(new Node(42));
-        tree2.getRoot().setLeft(new Node(100));
-        tree2.getRoot().setRight(new Node(600));
-        tree2.getRoot().getRight().setLeft(new Node(200));
-        tree2.getRoot().getRight().setRight(new Node(350));
+        String paragraph2 = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only";
+        assertEquals("it", test.repeatedWord(paragraph2));
 
-        assertEquals("[100, 200, 350]", trees.treeIntersection(tree1,tree2).toString());
+        String paragraph3 = "It was a queer,  sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York";
+        assertEquals("summer", test.repeatedWord(paragraph3));
 
     }
 
-    @Test
-    public void intersectionTreeTestNoResults(){
+        //    <<< Code Challenge 32 >>>
 
-        HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
-        BinaryTree tree1 = new BinaryTree();
-        BinaryTree tree2 = new BinaryTree();
+        @Test
+        public void intersectionTreeTest () {
 
-        tree1.setRoot(new Node(150));
-        tree1.getRoot().setLeft(new Node(100));
-        tree1.getRoot().setRight(new Node(250));
-        tree1.getRoot().getRight().setLeft(new Node(200));
-        tree1.getRoot().getRight().setRight(new Node(350));
+            HashTable<Integer, Integer> trees = new HashTable<Integer, Integer>();
+            BinaryTree tree1 = new BinaryTree();
+            BinaryTree tree2 = new BinaryTree();
 
-        tree2.setRoot(new Node(42));
-        tree2.getRoot().setLeft(new Node(101));
-        tree2.getRoot().setRight(new Node(600));
-        tree2.getRoot().getRight().setLeft(new Node(201));
-        tree2.getRoot().getRight().setRight(new Node(310));
+            tree1.setRoot(new Node(150));
+            tree1.getRoot().setLeft(new Node(100));
+            tree1.getRoot().setRight(new Node(250));
+            tree1.getRoot().getRight().setLeft(new Node(200));
+            tree1.getRoot().getRight().setRight(new Node(350));
 
-        assertEquals("[]", trees.treeIntersection(tree1,tree2).toString());
+            tree2.setRoot(new Node(42));
+            tree2.getRoot().setLeft(new Node(100));
+            tree2.getRoot().setRight(new Node(600));
+            tree2.getRoot().getRight().setLeft(new Node(200));
+            tree2.getRoot().getRight().setRight(new Node(350));
 
+            assertEquals("[100, 200, 350]", trees.treeIntersection(tree1, tree2).toString());
+
+        }
+
+        @Test
+        public void intersectionTreeTestNoResults () {
+
+            HashTable<Integer, Integer> trees = new HashTable<Integer, Integer>();
+            BinaryTree tree1 = new BinaryTree();
+            BinaryTree tree2 = new BinaryTree();
+
+            tree1.setRoot(new Node(150));
+            tree1.getRoot().setLeft(new Node(100));
+            tree1.getRoot().setRight(new Node(250));
+            tree1.getRoot().getRight().setLeft(new Node(200));
+            tree1.getRoot().getRight().setRight(new Node(350));
+
+            tree2.setRoot(new Node(42));
+            tree2.getRoot().setLeft(new Node(101));
+            tree2.getRoot().setRight(new Node(600));
+            tree2.getRoot().getRight().setLeft(new Node(201));
+            tree2.getRoot().getRight().setRight(new Node(310));
+
+            assertEquals("[]", trees.treeIntersection(tree1, tree2).toString());
+
+        }
+
+        @Test
+        public void intersectionTreeDifferentNumOfNodes () {
+
+            HashTable<Integer, Integer> trees = new HashTable<Integer, Integer>();
+            BinaryTree tree1 = new BinaryTree();
+            BinaryTree tree2 = new BinaryTree();
+
+            tree1.setRoot(new Node(150));
+            tree1.getRoot().setLeft(new Node(100));
+            tree1.getRoot().setRight(new Node(250));
+            tree1.getRoot().getRight().setLeft(new Node(200));
+            tree1.getRoot().getRight().setRight(new Node(350));
+
+            tree2.setRoot(new Node(42));
+            tree2.getRoot().setLeft(new Node(100));
+            tree2.getRoot().setRight(new Node(600));
+            tree2.getRoot().getRight().setLeft(new Node(200));
+
+            assertEquals("[100, 200]", trees.treeIntersection(tree1, tree2).toString());
+
+            HashTable<String, Integer> test = new HashTable<String, Integer>();
+
+
+            String paragraph = "Once upon a time";
+            assertEquals("no repeated words", test.repeatedWord(paragraph));
+        }
     }
 
-    @Test
-    public void intersectionTreeDifferentNumOfNodes(){
-
-        HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
-        BinaryTree tree1 = new BinaryTree();
-        BinaryTree tree2 = new BinaryTree();
-
-        tree1.setRoot(new Node(150));
-        tree1.getRoot().setLeft(new Node(100));
-        tree1.getRoot().setRight(new Node(250));
-        tree1.getRoot().getRight().setLeft(new Node(200));
-        tree1.getRoot().getRight().setRight(new Node(350));
-
-        tree2.setRoot(new Node(42));
-        tree2.getRoot().setLeft(new Node(100));
-        tree2.getRoot().setRight(new Node(600));
-        tree2.getRoot().getRight().setLeft(new Node(200));
-
-        assertEquals("[100, 200]", trees.treeIntersection(tree1,tree2).toString());
-
-    }
-}

@@ -126,5 +126,16 @@ class AppTest {
             String paragraph = "Once upon a time";
             assertEquals("no repeated words", test.repeatedWord(paragraph));
         }
+
+    //    <<< Code Challenge 32 >>>
+    @Test
+    void returnRepeated(){
+        String str = "Once upon a time, there was a brave princess who...";
+        try {
+            assertEquals("a", App.repeatedWord(str));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     }
 

@@ -5,10 +5,8 @@ package HashTabels;
 
 import HashTabels.binaryTree.BinaryTree;
 import HashTabels.binaryTree.Node;
-import java.util.HashMap;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class App {
 
@@ -88,6 +86,12 @@ public class App {
 
         System.out.println(leftJoin(firstHashMap, secondHashMap));
 
+        String str = "Once upon a time, there was a brave princess who...";
+        try {
+         System.out.println(repeatedWord(str));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -107,5 +111,26 @@ public class App {
         return list;
     }
 
+    // <<< Code Challenge 34>>>
+
+    public static String repeatedWord(String str) throws Exception {
+        Map<String, Integer> repeatedMap = new LinkedHashMap<>();
+        str = str.toLowerCase();
+        String[] strArr = str.split("[\\p{Punct}\\s]+");
+
+        for (String s : strArr) {
+            if (repeatedMap.containsKey(s))
+                repeatedMap.put(s, repeatedMap.get(s) + 1);
+            else
+                repeatedMap.put(s, 1);
+        }
+
+        for (Map.Entry<String, Integer> entry : repeatedMap.entrySet())
+            if (entry.getValue() > 1)
+                return entry.getKey();
+
+        return "";
     }
+
+}
 

@@ -30,7 +30,7 @@ class AppTest {
 
         graph.addVertex("Doaa");
         graph.addVertex("Mariam");
-        graph.addEdge("Motasim", "Mariam");
+        graph.addEdge("Doaa", "Mariam");
 
         assertEquals("Vertex{label='Mariam'}[Vertex{label='Doaa'}]Vertex{label='Doaa'}[Vertex{label='Mariam'}]", graph.printGraph());
     }

@@ -8,39 +8,50 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
 
 
-//        Linkedlist<String> newLinkedList= new Linkedlist<>();
-//
-//        newLinkedList.insert("a");
-//        newLinkedList.insert("b");
-//        newLinkedList.insert("c");
-//        newLinkedList.insert("d");
-//
-//        System.out.print(newLinkedList.toString());
-
         LinkedList<String> List1 = new LinkedList<String>();
-        LinkedList<Integer> List2 = new LinkedList<Integer>();
+        LinkedList<Integer> List2 = new LinkedList<>();
 
         List1.insert("a");
         List1.insert("b");
-        List1.insert("c");
-        List1.insert("d");
+        List1.insert("a");
+//        List1.insert("d");
 
-        List2.insert(1);
+        List2.insert(6);
+        List2.insert(5);
         List2.insert(2);
-        List2.insert(3);
         List2.insert(4);
 
 
-        System.out.println(List1.listReverser(List1));
+
+//        List1.delete("o");
+//        System.out.println(List1);
+       //================================================================================
+//        List2.sortList(List2);
+//        System.out.println(List2);
+
+        //================================================================================
+        List2.deleteNode(2, List2);
+        System.out.println(List2);
+
+        //==============================================================================
+//        System.out.println(List1.listReverser(List1));
+        //==============================================================================
+//        System.out.println("isPalindrome " + List1.isPalindrome(List1.getHead()));
+        //==============================================================================
+//        System.out.println(List1.isTextInList(List1,"m"));
+//        System.out.println(List1.isTextInList(List1,"f"));
+        //==============================================================================
+//        System.out.println(List1.isPalindrome(List1));
+
 //        List1.insertAfter(1, "g");
 
 //        System.out.println(List1.zipList(List1,List2));
 
-//        System.out.println(List1.includes("c"));
+//        System.out.println(List1.include("o"));
 
 //        System.out.println(List1.Kth(2));
 
@@ -50,6 +61,10 @@ public class App {
 
 //        List1.insertAfter("a" , "V");
 //        System.out.println(List1);
+
+
+//       List1.insertBefore("b" , "k");
+//       System.out.println(List1);
 
     }
 }

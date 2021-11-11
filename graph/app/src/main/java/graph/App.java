@@ -9,39 +9,26 @@ public class App {
 
         Graph graph = new Graph();
 
-        graph.addVertex("Motasim");
+        graph.addVertex("Doaa");
         graph.addVertex("Amara");
         graph.addVertex("Mariam");
         graph.addVertex("Alaa");
 
-        graph.addEdge("Motasim","Amara");
-        graph.addEdge("Motasim", "Mariam");
-        graph.addEdge("Motasim", "Alaa");
+        graph.addEdge("Doaa","Amara");
+        graph.addEdge("Doaa", "Mariam");
+        graph.addEdge("Doaa", "Alaa");
         graph.addEdge("Amara","Mariam");
         graph.addEdge("Mariam","Alaa");
         graph.addEdge("Alaa", "Amara");
 
         System.out.println(graph.printGraph());
 
-        graph.removeEdge("Alaa", "Mariam");
-        System.out.println();
-        System.out.println("delete edge --> "+graph.printGraph());
-
-        graph.removeVertex("Motasim");
-        System.out.println();
-        System.out.println("delete vertex --> " + graph.printGraph());
 
         System.out.println();
         System.out.println(graph.getVertices());
 
         System.out.println();
         System.out.println(graph.getNeighbors("Amara"));
-
-        System.out.println();
-        System.out.println(graph.breadthTraverse(graph, "Alaa"));
-
-        System.out.println();
-        System.out.println(graph.depthFirstTraverse(graph, "Alaa"));
 
         System.out.println();
         System.out.println(graph.size());

@@ -10,7 +10,6 @@ public class Vertex {
         this.data = data;
     }
 
-
     @Override
     public String toString() {
         return "Vertex{" +

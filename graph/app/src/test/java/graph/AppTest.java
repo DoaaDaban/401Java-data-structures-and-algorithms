@@ -16,7 +16,7 @@ class AppTest {
 
         Graph graph = new Graph();
 
-        graph.addVertex("Motasim");
+        graph.addVertex("Doaa");
         graph.addVertex("Amara");
 
         assertNotNull(graph.getVertices());
@@ -28,11 +28,11 @@ class AppTest {
 
         Graph graph = new Graph();
 
-        graph.addVertex("Motasim");
+        graph.addVertex("Doaa");
         graph.addVertex("Mariam");
         graph.addEdge("Motasim", "Mariam");
 
-        assertEquals("Vertex{label='Mariam'}[Vertex{label='Motasim'}]Vertex{label='Motasim'}[Vertex{label='Mariam'}]", graph.printGraph());
+        assertEquals("Vertex{label='Mariam'}[Vertex{label='Doaa'}]Vertex{label='Doaa'}[Vertex{label='Mariam'}]", graph.printGraph());
     }
 
     @Test
@@ -40,63 +40,17 @@ class AppTest {
 
         Graph graph = new Graph();
 
-        graph.addVertex("Motasim");
+        graph.addVertex("Doaa");
         graph.addVertex("Mariam");
         graph.addVertex("Alaa");
         graph.addVertex("Amara");
-        graph.addEdge("Motasim", "Alaa");
-        graph.addEdge("Motasim", "Mariam");
+        graph.addEdge("Doaa", "Alaa");
+        graph.addEdge("Doaa", "Mariam");
         graph.addEdge("Amara", "Mariam");
 
-        assertEquals("[Vertex{label='Alaa'}, Vertex{label='Mariam'}]",graph.getNeighbors("Motasim").toString());
+        assertEquals("[Vertex{label='Alaa'}, Vertex{label='Mariam'}]",graph.getNeighbors("Doaa").toString());
         assertEquals("[Vertex{label='Mariam'}]", graph.getNeighbors("Amara").toString());
 
     }
 
-    @Test
-    public void emptyGraph(){
-
-        Graph graph = new Graph();
-        assertEquals(0,graph.size());
-        assertEquals("[]", graph.getVertices().toString());
-    }
-
-    @Test
-    public void removeVertex(){
-
-        Graph graph = new Graph();
-
-        graph.addVertex("Motasim");
-        graph.addVertex("Amara");
-        graph.addEdge("Motasim", "Amara");
-        assertEquals("Vertex{label='Amara'}[Vertex{label='Motasim'}]Vertex{label='Motasim'}[Vertex{label='Amara'}]",graph.printGraph());
-        assertEquals(2, graph.size());
-
-        graph.removeVertex("Motasim");
-        assertEquals("Vertex{label='Amara'}[]",graph.printGraph());
-        assertEquals(1, graph.size());
-    }
-
-    @Test
-    public void removeEdge(){
-        Graph graph = new Graph();
-
-        graph.addVertex("Motasim");
-        graph.addVertex("Amara");
-        graph.addEdge("Motasim", "Amara");
-        assertEquals("Vertex{label='Amara'}[Vertex{label='Motasim'}]Vertex{label='Motasim'}[Vertex{label='Amara'}]",graph.printGraph());
-
-        graph.removeEdge("Amara", "Motasim");
-        assertEquals("Vertex{label='Amara'}[]Vertex{label='Motasim'}[]", graph.printGraph());
-    }
-
-    @Test
-    public void oneVertexAndOneEdge(){
-        Graph graph = new Graph();
-
-        graph.addVertex("Motasim");
-        graph.removeEdge("Motasim","Motasim");
-
-        assertEquals("Vertex{label='Motasim'}[]",graph.printGraph());
-    }
 }

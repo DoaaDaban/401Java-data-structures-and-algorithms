@@ -1,12 +1,13 @@
 package CC.linkedList;
 
-public class Node<T> {
-    private T data ;
-    private Node<T> next;
+public class Node<T>{
+  private   T data;
+  private  Node<T> next;
+
 
     public Node(T data) {
         this.data = data;
-//        this.next= null;
+        this.next = null;
     }
 
     public T getData() {
@@ -26,13 +27,14 @@ public class Node<T> {
     }
 }
 
-//public class Node<T>{
-//
-//    private T data;
+
+//public class Node<T> {
+//    private T data ;
 //    private Node<T> next;
 //
 //    public Node(T data) {
 //        this.data = data;
+////        this.next= null;
 //    }
 //
 //    public T getData() {
@@ -51,3 +53,4 @@ public class Node<T> {
 //        this.next = next;
 //    }
 //}
+//

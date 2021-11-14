@@ -56,3 +56,22 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 4. `getNeighbors(String data)`: This method returns all the connections of the required vertex as a list.
 
 5. `size()`: This method to get the number of all vertices in the graph.
+
+
+# Graph Breadth First
+
+Create a static method which returns a Set of the Graph vertices in their breadth from a specified root.
+
+## Challenge
+
+Create a method that take a vertex as a parameter as a start point and return a collection of vertices in the order they were visited.
+
+## Whiteboard Process
+
+![graph-breadth-first](/images/code-challeng-36.png)
+
+## Approach and Efficiency
+
+* Time: O(n^2)
+
+* Space: O(n)

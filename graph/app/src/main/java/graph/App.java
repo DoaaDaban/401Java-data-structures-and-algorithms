@@ -9,27 +9,19 @@ public class App {
 
         Graph graph = new Graph();
 
-        graph.addVertex("Motasim");
+        graph.addVertex("doaa");
         graph.addVertex("Amara");
         graph.addVertex("Mariam");
         graph.addVertex("Alaa");
 
-        graph.addEdge("Motasim","Amara");
-        graph.addEdge("Motasim", "Mariam");
-        graph.addEdge("Motasim", "Alaa");
+        graph.addEdge("doaa","Amara");
+        graph.addEdge("doaa", "Mariam");
+        graph.addEdge("doaa", "Alaa");
         graph.addEdge("Amara","Mariam");
         graph.addEdge("Mariam","Alaa");
         graph.addEdge("Alaa", "Amara");
 
         System.out.println(graph.printGraph());
-
-        graph.removeEdge("Alaa", "Mariam");
-        System.out.println();
-        System.out.println("delete edge --> "+graph.printGraph());
-
-        graph.removeVertex("Motasim");
-        System.out.println();
-        System.out.println("delete vertex --> " + graph.printGraph());
 
         System.out.println();
         System.out.println(graph.getVertices());
@@ -38,13 +30,32 @@ public class App {
         System.out.println(graph.getNeighbors("Amara"));
 
         System.out.println();
-        System.out.println(graph.breadthTraverse(graph, "Alaa"));
-
-        System.out.println();
-        System.out.println(graph.depthFirstTraverse(graph, "Alaa"));
-
-        System.out.println();
         System.out.println(graph.size());
+
+
+        //        <<< Code Challenge 36 >>>
+
+        Graph graph1 = new Graph();
+
+        graph1.addVertex("Pandora");
+        graph1.addVertex("Arendelle");
+        graph1.addVertex("Metroville");
+        graph1.addVertex("Monstroplolis");
+        graph1.addVertex("Narnia");
+        graph1.addVertex("Naboo");
+
+        graph1.addEdge("Pandora", "Arendelle");
+        graph1.addEdge("Arendelle", "Metroville");
+        graph1.addEdge("Arendelle", "Monstroplolis");
+        graph1.addEdge("Metroville", "Narnia");
+        graph1.addEdge("Metroville", "Naboo");
+        graph1.addEdge("Metroville", "Monstroplolis");
+        graph1.addEdge("Monstroplolis", "Naboo");
+        graph1.addEdge("Narnia", "Naboo");
+
+
+        System.out.println(graph1.breadthTraverse( "Pandora"));
+
 
     }
 

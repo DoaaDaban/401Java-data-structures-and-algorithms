@@ -68,7 +68,7 @@ Create a method that take a vertex as a parameter as a start point and return a 
 
 ## Whiteboard Process
 
-![graph-breadth-first](/images/code-challeng-36.png)
+![graph-breadth-first](images/code-challeng-36.png)
 
 ## Approach and Efficiency
 

@@ -3,6 +3,9 @@
  */
 package CC.linkedList;
 
+import java.Tree.BinaryNode;
+import java.Tree.BinaryTree;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -65,6 +68,10 @@ public class App {
 
 //       List1.insertBefore("b" , "k");
 //       System.out.println(List1);
+
+        //=====================================Tree==================================================
+        BinaryTree<String> Bt1= new BinaryTree<>();
+
 
     }
 }

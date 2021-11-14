@@ -23,27 +23,6 @@ public class Graph {
         adjVertices.get(vertex2).add(vertex1);
     }
 
-    void removeVertex(String data) {
-        Vertex vertex = new Vertex(data);
-        adjVertices.values().forEach(list -> list.remove(vertex));
-        adjVertices.remove(vertex);
-    }
-
-    void removeEdge(String data1, String data2) {
-        Vertex vertex1 = new Vertex(data1);
-        Vertex vertex2 = new Vertex(data2);
-
-        List<Vertex> edgeVertex1 = adjVertices.get(vertex1);
-        List<Vertex> edgeVertex2 = adjVertices.get(vertex2);
-
-        if (edgeVertex1 != null) {
-            edgeVertex1.remove(vertex2);
-        }
-
-        if (edgeVertex2 != null) {
-            edgeVertex2.remove(vertex1);
-        }
-    }
 
     String printGraph() {
         StringBuilder stringBuilder = new StringBuilder();
@@ -82,14 +61,21 @@ public class Graph {
         return visited;
     }
 
-    Set<String> breadthTraverse(Graph graph, String root) {
+
+    public List<Vertex> getNeighbors(String data) {
+        return adjVertices.get(new Vertex(data));
+    }
+
+    //    <<< Code Challenge 36 >>>
+
+    Set<String> breadthTraverse( String root) {
         Set<String> visited = new LinkedHashSet<>();
         Queue<String> queue = new LinkedList<>();
         queue.add(root);
         visited.add(root);
         while (!queue.isEmpty()) {
             String vertex = queue.poll();
-            for (Vertex v : graph.getNeighbors(vertex)) {
+            for (Vertex v : getNeighbors(vertex)) {
                 if (!visited.contains(v.data)) {
                     visited.add(v.data);
                     queue.add(v.data);
@@ -97,9 +83,5 @@ public class Graph {
             }
         }
         return visited;
-    }
-
-    public List<Vertex> getNeighbors(String data) {
-        return adjVertices.get(new Vertex(data));
     }
 }

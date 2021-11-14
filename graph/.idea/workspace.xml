@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="280e1b35-c192-4d91-9f1e-5d997eaed6cd" name="Changes" comment="" />
+    <list default="true" id="280e1b35-c192-4d91-9f1e-5d997eaed6cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CC/app/src/main/java/java/Tree/BST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CC/app/src/main/java/java/Tree/BinaryNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CC/app/src/main/java/java/Tree/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CC/app/src/main/java/CC/linkedList/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CC/app/src/main/java/CC/linkedList/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,9 +24,17 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="graph" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -54,7 +68,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Gradle.AppTest.vertexNeighbors">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="graph.App" />
       <module name="graph.app.main" />
@@ -67,27 +81,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;graph.AppTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="AppTest.addEdge" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -110,12 +103,33 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.addVertex" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppTest.breadthFirst" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;graph.AppTest.addVertex&quot;" />
+        <option name="scriptParameters" value="--tests &quot;graph.AppTest.breadthFirst&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppTest.oneVertexAndOneEdge" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;graph.AppTest.oneVertexAndOneEdge&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -154,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AppTest.vertexNeighbors" />
-        <item itemvalue="Gradle.AppTest.addEdge" />
-        <item itemvalue="Gradle.AppTest.addVertex" />
-        <item itemvalue="Gradle.AppTest" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Gradle.AppTest.breadthFirst" />
+        <item itemvalue="Gradle.AppTest.addEdge" />
+        <item itemvalue="Gradle.AppTest.oneVertexAndOneEdge" />
+        <item itemvalue="Gradle.AppTest.vertexNeighbors" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +197,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

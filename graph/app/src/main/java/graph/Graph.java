@@ -23,7 +23,7 @@ public class Graph {
         adjVertices.get(vertex2).add(vertex1);
     }
 
-
+    
     String printGraph() {
         StringBuilder stringBuilder = new StringBuilder();
         for (Vertex vertex : adjVertices.keySet()) {
@@ -40,6 +40,10 @@ public class Graph {
 
     public Set<Vertex> getVertices(){
         return adjVertices.keySet();
+    }
+
+    public List<Vertex> getNeighbors(String data) {
+        return adjVertices.get(new Vertex(data));
     }
 
     Set<String> depthFirstTraverse(Graph graph, String root) {
@@ -61,10 +65,6 @@ public class Graph {
         return visited;
     }
 
-
-    public List<Vertex> getNeighbors(String data) {
-        return adjVertices.get(new Vertex(data));
-    }
 
     //    <<< Code Challenge 36 >>>
 

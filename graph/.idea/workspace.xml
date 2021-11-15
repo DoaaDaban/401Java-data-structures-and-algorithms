@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="280e1b35-c192-4d91-9f1e-5d997eaed6cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CC/app/src/main/java/CC/linkedList/BST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/graph/images/code-challeng-37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CC/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CC/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CC/app/src/main/java/CC/linkedList/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CC/app/src/main/java/CC/linkedList/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CC/app/src/main/java/java/Tree/BST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CC/app/src/main/java/java/Tree/BinaryNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CC/app/src/main/java/CC/linkedList/BinaryNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CC/app/src/main/java/java/Tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CC/app/src/main/java/CC/linkedList/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/graph/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/graph/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/graph/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/graph/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/graph/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/graph/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/graph/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/graph/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/graph/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/graph/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/graph/Vertex.java" afterDir="false" />
-    </list>
+    <list default="true" id="280e1b35-c192-4d91-9f1e-5d997eaed6cd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +68,7 @@
       <recent name="\\wsl$\Ubuntu\home\doaa\401\401Java-data-structures-and-algorithms\graph\app\src\main\java\graph\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Gradle.AppTest.businessTripNoEdge">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="graph.App" />
       <module name="graph.app.main" />
@@ -146,6 +124,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AppTest.businessTripNoEdge" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;graph.AppTest.businessTripNoEdge&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="AppTest.oneVertexAndOneEdge" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -167,34 +166,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AppTest.vertexNeighbors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;graph.AppTest.vertexNeighbors&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AppTest.businessTripNoEdge" />
         <item itemvalue="Application.App" />
         <item itemvalue="Gradle.AppTest.breadthFirst" />
         <item itemvalue="Gradle.AppTest.addEdge" />
         <item itemvalue="Gradle.AppTest.oneVertexAndOneEdge" />
-        <item itemvalue="Gradle.AppTest.vertexNeighbors" />
       </list>
     </recent_temporary>
   </component>

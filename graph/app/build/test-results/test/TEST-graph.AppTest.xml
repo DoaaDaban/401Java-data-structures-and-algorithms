@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="graph.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-15T13:59:07" hostname="LTUCSTUDENT-L108" time="0.03">
+<testsuite name="graph.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-15T14:01:37" hostname="LTUCSTUDENT-L108" time="0.047">
   <properties/>
-  <testcase name="businessTripNoEdge()" classname="graph.AppTest" time="0.03"/>
+  <testcase name="businessTripAtLeastOnoEdge()" classname="graph.AppTest" time="0.047"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

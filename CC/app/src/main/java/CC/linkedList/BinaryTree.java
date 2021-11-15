@@ -1,8 +1,19 @@
-package java.Tree;
+package CC.linkedList;
+
+import CC.linkedList.BinaryNode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BinaryTree<T>{
 
-    private BinaryNode<T> root;
+    protected BinaryNode<T> root;
+
+    List<Integer> postOrderList = new ArrayList<>(); // FOR TEST and use it in code challenge 16
+    List<Integer> inOrderList = new ArrayList<>();  // FOR TEST
+    List<Integer> preOrderList = new ArrayList<Integer>(); // FOR TEST
+    private Object Integer;
+
 
     public BinaryTree() {
     }
@@ -11,15 +22,13 @@ public class BinaryTree<T>{
         this.root = root;
     }
 
-    // preOrder => root, left, right
-    public T preOrder(T data){
+    public List<T> preOrder(){
         if(isEmpty()){
             return null;
         }
-        else{
-            preOrderTravarsal(root, data);
-        }
-        return data;
+            List<T> list= new ArrayList<>();
+            preOrderTravarsal(root, list);
+             return list ;
     }
 
     public T inOrder(T data){
@@ -42,16 +51,16 @@ public class BinaryTree<T>{
         return data;
     }
 
-    public void preOrderTravarsal(BinaryNode<T> root, T data){
-
-        System.out.println(root.getData());
+    // preOrder => root, left, right
+    public void preOrderTravarsal(BinaryNode<T> root, List<T> list){
+        list.add(root.getData());
 
         if(root.getLeftNode()!=null){
-            preOrderTravarsal(root.getLeftNode(), data);
+            preOrderTravarsal(root.getLeftNode(), list);
         }
 
         if(root.getRightNode() !=null){
-            preOrderTravarsal(root.getRightNode(), data);
+            preOrderTravarsal(root.getRightNode(), list);
         }
     }
 
@@ -86,8 +95,23 @@ public class BinaryTree<T>{
         return root;
     }
 
-
     //===============================
+
+
+
+//    public int findMaxvalue() {
+//        if(root == null){
+//            throw new IllegalArgumentException("the tree is empty");}
+//
+//        int max = (int) root.getData();
+//        preOrder();
+//        for(int i = 0; i<preOrderList.size(); i++){
+//            if(max<preOrderList.get(i)){
+//                max = preOrderList.get(i);
+//            }
+//        }
+//        return max;
+//    }
 
     public void setRoot(BinaryNode<T> root) {
         this.root = root;
@@ -96,9 +120,4 @@ public class BinaryTree<T>{
     public boolean isEmpty(){
         return root==null;
     }
-//        if(root==null){
-//            return false;
-//        }else
-//        return true;
-//    }
 }

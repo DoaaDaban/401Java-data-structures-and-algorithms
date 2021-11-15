@@ -1,4 +1,4 @@
-package java.Tree;
+package CC.linkedList;
 
 public class BinaryNode<T>{
 
